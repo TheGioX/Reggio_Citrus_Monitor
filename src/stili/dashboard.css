@@ -1,0 +1,418 @@
+/* ============================= */
+/* === LAYOUT PRINCIPALE     === */
+/* ============================= */
+
+.contenitore {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.contenitore.distruzione {
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+.contenitore.entrata {
+  opacity: 0;
+  transform: scale(1.1);
+  animation: entrataDashboard 0.8s forwards ease;
+}
+
+@keyframes entrataDashboard {
+  0% {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.pagina-iniziale {
+  opacity: 0;
+  animation: fadeInBg 1s forwards;
+  animation-delay: 0s;
+}
+
+/* Sfondo */
+@keyframes fadeInBg {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Logo */
+.logo {
+  opacity: 0;
+  transform: scale(0.8);
+  animation: fadeInLogo 0.6s forwards;
+  animation-delay: 0.8s;
+}
+
+@keyframes fadeInLogo {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Titolo */
+.titolo {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInTitolo 0.8s forwards;
+  animation-delay: 1.6s;
+}
+
+@keyframes fadeInTitolo {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.testo-settore {
+  opacity: 0;
+  animation: fadeInTestoSettore 0.8s forwards;
+  animation-delay: 2s;
+}
+@keyframes fadeInTestoSettore {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Bottone Genera Dati */
+.bottone-generadati {
+  opacity: 0;
+  animation: fadeInBottone 0.8s forwards;
+  animation-delay: 2.4s;
+}
+
+.bottone-rigeneradati {
+  opacity: 0;
+  animation: fadeInBottone 0.8s forwards;
+  animation-delay: 2.4s;
+}
+
+.bottone-resettadati {
+  opacity: 0;
+  animation: fadeInBottoneresettadati 0.8s forwards;
+  animation-delay: 2.4s;
+}
+
+.bottone-resettadati.finto {
+  visibility: hidden;
+  pointer-events: none;
+  position: absolute; /* evita che occupi spazio */
+}
+
+@keyframes fadeInBottone {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeInBottoneresettadati {
+  to {
+    opacity: 1;
+  }
+}
+/* Testo paragrafo iniziale */
+.sotto-bottone {
+  opacity: 0;
+  animation: fadeInTesto 0.8s forwards;
+  animation-delay: 2.8s;
+}
+
+@keyframes fadeInTesto {
+  to {
+    opacity: 1;
+  }
+}
+
+/* ============================= */
+/* === INTESTAZIONE & HEADER === */
+/* ============================= */
+
+.intestazione {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.testo-settore {
+  display: "inline-block";
+  margin-right: "20px";
+}
+
+.form-inline {
+  display: inline-block;
+}
+.logo {
+  transition: width 0.8s ease;
+}
+.logo-grande {
+  width: 450px;
+}
+.logo-piccolo {
+  width: 200px;
+}
+
+.titolo {
+  transition: font-size 0.8s ease;
+}
+.titolo-grande {
+  font-size: 3.5rem;
+}
+.titolo-piccolo {
+  font-size: 2.5rem;
+}
+.testo-pre-grafico {
+  text-align: "center";
+  padding: "1rem";
+}
+
+/* ============================= */
+/* === AREA GRAFICI          === */
+/* ============================= */
+
+.griglia-dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* spazio tra un grafico e l'altro */
+}
+
+.blocco-grafico {
+  width: 100%;
+  background-color: transparent;
+  min-height: 300px; /* altezza minima per i grafici */
+}
+
+/* ============================= */
+/* === KPI - Indicatori      === */
+/* ============================= */
+
+.kpi-wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.conf-wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.kpi-box {
+  background-color: var(--box-bg);
+  color: var(--kpi-text);
+  padding: 1rem;
+  border-radius: 16px;
+  border: 1px solid #ccc;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  min-width: 200px;
+  text-align: center;
+}
+
+.configurazione-box {
+  background-color: var(--box-bg);
+  color: var(--box-text);
+  border-radius: 16px;
+  padding: 1rem;
+  margin: 2rem auto;
+  width: 95%;
+  font-size: 1rem;
+  line-height: 0.5;
+}
+
+.configurazione-box-simula {
+  background-color: var(--box-bg);
+  color: var(--box-text);
+  border: 1px solid #ccc;
+  border-radius: 16px;
+  padding: 1rem;
+  margin: 2rem auto;
+  width: 80%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  font-size: 1rem;
+  line-height: 0.5;
+}
+
+.configurazione-box h4 {
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.configurazione-box .contenuto-configurazione {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.lista-configurazione {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.lista-configurazione-interna {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 800px;
+  padding-bottom: 40px;
+}
+
+.configurazione-box li {
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dashed #5555;
+  padding-bottom: 4px;
+}
+
+.lista-prezzi {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 0;
+  padding-left: 0;
+  margin-right: 0px;
+}
+
+.lista-prezzi li {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.input-con-euro {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+  min-width: 100px;
+}
+
+.riga-configurazione {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+@media (max-width: 768px) {
+  .riga-configurazione {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .lista-prezzi li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .input-con-euro {
+    width: 100%; /* L’input prende tutta la riga disponibile */
+  }
+
+  .configurazione-box ul {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+/* ============================= */
+/* === BOTTONI PRINCIPALI    === */
+/* ============================= */
+
+.bottone-rigeneradati {
+  background-color: #6200ea;
+  color: white;
+  padding: 10px 20px;
+  margin-right: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.bottone-generadati {
+  background-color: #6200ea;
+  color: white;
+  padding: 10px 20px;
+  margin-right: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.bottone-generadati:hover {
+  background-color: #3700b3;
+}
+
+.bottone-resettadati {
+  background-color: #d32f2f;
+  color: white;
+  padding: 10px 20px;
+  margin-right: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.bottone-resettadati:hover {
+  background-color: #9a0007;
+}
+
+.bottone-generadati:hover,
+.bottone-resettadati:hover {
+  transform: translateY(-2px);
+}
+
+/* Contenitore pulsanti Applica / Annulla o Simula */
+.blocco-pulsanti-simulazione {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* Pulsante Ripristina - sempre visibile */
+.blocco-pulsante-ripristina {
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Messaggio di errore */
+.messaggio-errore {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
+}

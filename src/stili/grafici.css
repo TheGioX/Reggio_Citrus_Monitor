@@ -1,0 +1,404 @@
+/* ===================================================== */
+/* === BOX GRAFICI - Selezione Stile Grafico =========== */
+/* ===================================================== */
+
+.box-grafici-wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 20px 0;
+  gap: 1rem;
+}
+
+.box-grafico {
+  width: 130px;
+  height: 130px;
+  border-radius: 12px;
+  background-color: var(--box-bg);
+  color: var(--box-text);
+  font-weight: bold;
+  font-size: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.3s, background-color 0.3s, color 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.box-grafico-wrapper-colonna {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.box-grafico.sotto-grafico {
+  width: 90px;
+  height: 90px;
+  font-size: 0.9rem;
+  background-color: #fdd835;
+}
+
+.box-grafico.sotto-grafico:hover {
+  background-color: #fbc02d;
+}
+
+.box-cicliLimoni .sotto-testo {
+  margin: 0;
+  font-weight: bold;
+}
+
+.box-simulazione .sotto-testo {
+  margin: 0;
+  font-weight: bold;
+}
+
+.box-grafico.sotto-grafico-simulazione {
+  width: 90px;
+  height: 90px;
+  font-size: 0.9rem;
+  background-color: #b2ebf2;
+}
+.box-grafico.sotto-grafico-simulazione:hover {
+  background-color: #4dd0e1;
+}
+
+.box-grafico:hover {
+  transform: scale(1.05);
+}
+
+.box-grafico.attivo {
+  box-shadow: 0 0 0 3px #6200ea inset;
+}
+
+.emoji {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.emoji-simulazione {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+/* Override colore specifico per box visuali */
+
+.box-temperature {
+  background-color: #ff8a65;
+}
+.box-temperature:hover {
+  background-color: #e57350;
+}
+
+.box-umidita {
+  background-color: #4fc3f7;
+}
+.box-umidita:hover {
+  background-color: #29b6f6;
+}
+
+.box-pioggia {
+  background-color: #9575cd;
+}
+.box-pioggia:hover {
+  background-color: #7e57c2;
+}
+
+.box-raccolto {
+  background-color: #81c784;
+}
+.box-raccolto:hover {
+  background-color: #66bb6a;
+}
+
+.box-cicliLimoni {
+  background-color: #fdd835;
+  color: #033112;
+}
+.box-cicliLimoni:hover {
+  background-color: #fbc02d;
+}
+.box-simulazione {
+  background-color: #b2ebf2;
+  color: #033112;
+}
+
+.box-simulazione:hover {
+  background-color: #4dd0e1;
+}
+
+/* ======================================= */
+/* === GRAFICI ANNUALI E RACCOLTO      === */
+/* ======================================= */
+
+.grafico-wrapper {
+  width: 100%;
+  height: 300px;
+}
+
+.grafico-wrapper-finanza {
+  width: 100%;
+  min-height: 300px;
+}
+
+.grafico-wrapper-raccolto {
+  width: 100%;
+  height: 500px;
+}
+
+.grafico-container-raccolto {
+  margin-top: 40px;
+  position: relative;
+}
+
+.lista-eventi {
+  padding-left: 1rem;
+  margin: 0;
+}
+.nessun-evento {
+  font-style: italic;
+  color: #888;
+}
+
+.agrume {
+  cursor: pointer;
+  margin-right: 1.5rem;
+}
+
+.agrume-visibile {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.agrume-nascosto {
+  color: #666;
+  font-weight: normal;
+  text-decoration: line-through;
+}
+
+.ciclo {
+  cursor: pointer;
+  margin-right: 1.5rem;
+}
+
+.ciclo-visibile {
+  color: inherit; /* Il colore sarà dinamico */
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.ciclo-nascosto {
+  color: #666;
+  font-weight: normal;
+  text-decoration: line-through;
+}
+
+/* ========================= */
+/* === TABELLE DETTAGLIO === */
+/* ========================= */
+
+.contenitore-grafico-e-tabella {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.contenitore-tabella {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.grafico-container-raccolto .contenitore-tabella {
+  width: 100%;
+  margin-top: 10px;
+  padding-bottom: 50px;
+}
+
+.contenitore-tabella h4 {
+  margin-bottom: 20px;
+}
+
+.tabella-dettagli {
+  width: 100%;
+  padding-left: 250px;
+  padding-right: 250px;
+}
+
+.tabella-dettagli th,
+.tabella-dettagli td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}
+
+.utile-positivo {
+  color: #2e7d32;
+  font-weight: bold;
+}
+
+.utile-negativo {
+  color: #c62828;
+  font-weight: bold;
+}
+
+/* ================================ */
+/* === PULSANTI ZOOM / INDIETRO === */
+/* ================================ */
+
+.bottone-zoom,
+.bottone-zoom-raccolto,
+.bottone-zoom-limoni {
+  position: absolute;
+  right: 1269px;
+  padding: 8px 16px;
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: bold;
+  z-index: 10;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.bottone-zoom {
+  top: 17px;
+}
+.bottone-zoom-raccolto,
+.bottone-zoom-limoni {
+  top: -1px;
+}
+
+.bottone-zoom:hover,
+.bottone-zoom-raccolto:hover {
+  background-color: #1976d2;
+  transform: translateY(-1px);
+}
+
+.bottone-indietro,
+.bottone-indietro-raccolto,
+.bottone-indietro-limoni {
+  position: absolute;
+  right: 0px;
+  padding: 8px 16px;
+  background-color: #9e9e9e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: bold;
+  z-index: 10;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.bottone-indietro-limoni {
+  top: 0px;
+}
+
+.bottone-indietro:hover,
+.bottone-indietro-raccolto:hover {
+  background-color: #616161;
+  transform: translateY(-1px);
+}
+
+.freccia-navigazione-sx {
+  background-color: #646cff; /* stesso colore del bottone indietro */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin-right: 20px;
+  padding: 0.4rem 0.8rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+.freccia-navigazione-dx {
+  background-color: #646cff; /* stesso colore del bottone indietro */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.4rem 0.8rem;
+  margin-left: 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+.freccia-navigazione:hover {
+  background-color: #4e56c6; /* colore più scuro al passaggio */
+}
+
+/* Responsive per pulsanti */
+@media (max-width: 1400px) {
+  .bottone-zoom,
+  .bottone-zoom-raccolto,
+  .bottone-indietro,
+  .bottone-indietro-raccolto {
+    position: static;
+    display: block;
+    margin: 10px auto;
+    width: fit-content;
+  }
+}
+
+/* ============================ */
+/* === TOOLTIP E LEGENDA     === */
+/* ============================ */
+
+.custom-tooltip {
+  background-color: var(--box-bg);
+  color: var(--box-text);
+  border: 1px solid #ccc;
+  padding: 6px 10px;
+  font-size: 0.85rem;
+  border-radius: 4px;
+}
+
+.testo-ricavi {
+  color: #4caf50;
+}
+
+.testo-spese {
+  color: #f44336;
+}
+
+.testo-utile {
+  color: #2196f3;
+}
+
+.testo-umidita {
+  color: #1976d2;
+}
+.testo-temperatura {
+  color: #ff5722;
+}
+.testo-pioggia {
+  color: #009688;
+}
+
+.custom-legend {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-bottom: 20px;
+}
+
+@media (max-width: 1400px) {
+  .custom-legend {
+    position: static;
+    display: block;
+    margin: 10px auto;
+    width: fit-content;
+  }
+}
